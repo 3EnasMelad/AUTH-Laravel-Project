@@ -18,6 +18,15 @@ Route::get('/', function () {
 
 
 
+use App\Http\Controllers\FormController;
+
+Route::middleware(['auth'])->get('/forms', [FormController::class, 'index'])->name('forms.index'); // لعرض جميع النماذج
+Route::middleware(['auth'])->get('/forms/create', [FormController::class, 'create'])->name('forms.create'); // لعرض صفحة إنشاء نموذج جديد
+Route::post('/forms', [FormController::class, 'store'])->name('forms.store'); // لحفظ نموذج جديد
+
+Route::get('/forms/{form}/fill', [FormController::class, 'fill'])->name('forms.fill'); // لعرض نموذج معين للتعبئة
+Route::post('/forms/{form}/submit', [FormController::class, 'submitForm'])->name('forms.submit'); // لحفظ البيانات المدخلة في نموذج معين
+Route::delete('/forms/{id}', [FormController::class, 'destroy'])->name('forms.destroy');
 
 
 

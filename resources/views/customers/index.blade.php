@@ -16,7 +16,7 @@
       
 
 
-        <table id="hh" class="table table-bordered shadow-sm rounded-3" style="line-height: 2.5;">
+        <table  class="table table-bordered shadow-sm rounded-3" style="line-height: 2.5;">
             <thead style="background-color: #a2e8b2; color: #333; font-weight: bold; line-height: 3;">
                 <tr>
                     <th style="width: 30%; background-color:rgb(38, 27, 201) ;color:white">Name</th>
@@ -37,7 +37,8 @@
                 @endforeach
             </tbody>
         </table>
-        
+        <a href="/forms" class="btn-custom">Do You Want To Create Your Own Form !!!?</a>
+
         <style>
             /* تكبير المسافة بين الأسطر */
             .table-row {
@@ -45,9 +46,28 @@
             }
         
             /* تغيير لون الصف عند التمرير */
-             #hh .table-row:hover {
+              .table-row:hover {
                 background-color: #ffcccc; /* لون أحمر فاتح */
             }
+
+            .btn-custom {
+                background-color:rgb(38, 27, 201);
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left:65vh
+}
+
+.btn-custom:hover {
+    background-color: #0966c9; /* لون عند التحويم */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+}
         </style>
         
 
